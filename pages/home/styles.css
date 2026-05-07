@@ -1017,6 +1017,22 @@ header .logo{
 }
 .detail-link:hover { color: var(--lila-600); }
 
+.map-wrapper {
+  margin-top: var(--space-7);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--neutral-200);
+  box-shadow: var(--shadow-sm);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.map-wrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+.map-wrapper iframe {
+  display: block;
+}
+
 .contact-form-side {
   flex: 1;
   padding: var(--space-8);
