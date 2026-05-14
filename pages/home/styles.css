@@ -958,23 +958,19 @@ header .logo{
   border-top:1px solid var(--neutral-100);border-bottom:1px solid var(--neutral-100);
   overflow:hidden;
 }
-.carousel-wrapper{overflow:hidden;position:relative}
-.carousel-wrapper::before,.carousel-wrapper::after{
-  content:'';position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none;
+.assoc-logos{
+  display:flex;align-items:center;justify-content:center;
+  flex-wrap:wrap;gap:var(--space-8);
 }
-.carousel-wrapper::before{left:0;background:linear-gradient(90deg,var(--white-pure),transparent)}
-.carousel-wrapper::after{right:0;background:linear-gradient(270deg,var(--white-pure),transparent)}
-.carousel-track{
-  display:flex;align-items:center;gap:var(--space-8);
-  animation:marquee 20s linear infinite;width:max-content;
-}
-.carousel-track:hover{animation-play-state:paused}
-@keyframes marquee{to{transform:translateX(-50%)}}
-.carousel-track .assoc-logo{
-  height:36px;filter:grayscale(100%) opacity(.45);
+.assoc-logos .assoc-logo{
+  height:72px;filter:grayscale(100%) opacity(.45);
   transition:filter .3s ease;flex-shrink:0;
 }
-.carousel-track .assoc-logo:hover{filter:grayscale(0%) opacity(1)}
+.assoc-logos .assoc-logo:hover{filter:grayscale(0%) opacity(1)}
+.assoc-text{
+  font:700 28px/72px var(--font-heading);color:var(--lila-700);
+  white-space:nowrap;height:auto;
+}
 
 /* ── Conversion (Premium Contact Box) ── */
 .conversion {
@@ -1166,10 +1162,75 @@ header .logo{
 /* ── Footer ── */
 .site-footer{
   background:var(--lila-900);color:var(--lila-300);
-  padding:var(--space-7) 0 var(--space-5);text-align:center;
+  padding:var(--space-10) 0 0;
 }
-.site-footer .footer-logo{height:80px !important;width:auto;margin:0 auto var(--space-4);opacity:.9;filter:brightness(0) invert(1)}
-.site-footer p{font-size:13px}
+
+/* Top grid */
+.footer-top{
+  display:grid;
+  grid-template-columns:1.6fr 1fr 1fr 1.4fr;
+  gap:var(--space-8);
+  padding-bottom:var(--space-9);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+/* Brand column */
+.footer-logo{
+  height:64px;width:auto;
+  filter:brightness(0) invert(1);opacity:.9;
+  margin-bottom:var(--space-4);display:block;
+}
+.footer-tagline{
+  font-size:14px;line-height:1.65;color:var(--lila-400);
+  max-width:280px;margin-bottom:var(--space-4);
+}
+.footer-brand .footer-langs{display:flex;gap:var(--space-2)}
+
+/* Columns */
+.footer-heading{
+  font:700 12px/1 var(--font-heading);
+  letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(255,255,255,.5);
+  margin-bottom:var(--space-5);
+}
+.footer-links{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:var(--space-3)}
+.footer-links a{
+  font-size:14px;color:var(--lila-300);text-decoration:none;
+  transition:color .2s ease;
+}
+.footer-links a:hover{color:#fff}
+
+/* Contact list */
+.footer-contact-list{
+  list-style:none;padding:0;margin:0;
+  display:flex;flex-direction:column;gap:var(--space-4);
+}
+.footer-contact-list li{
+  display:flex;align-items:flex-start;gap:var(--space-3);
+  font-size:14px;color:var(--lila-300);line-height:1.5;
+}
+.footer-contact-list svg{
+  flex-shrink:0;margin-top:2px;
+  color:var(--lila-400);
+}
+.footer-contact-list a{
+  color:var(--lila-300);text-decoration:none;transition:color .2s ease;
+}
+.footer-contact-list a:hover{color:#fff}
+
+/* Bottom bar */
+.footer-bottom{
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:var(--space-3);
+  padding:var(--space-5) 0;
+}
+.footer-bottom p{font-size:12px;color:var(--lila-500);margin:0}
+.footer-legal-links{display:flex;gap:var(--space-5);flex-wrap:wrap}
+.footer-legal-links a{
+  font-size:12px;color:var(--lila-500);text-decoration:none;
+  transition:color .2s ease;
+}
+.footer-legal-links a:hover{color:var(--lila-300)}
 
 /* ── WhatsApp Float ── */
 .whatsapp-float{
