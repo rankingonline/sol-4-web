@@ -19,10 +19,39 @@
       <img src="../../assets/logo/logo-sol-4.png" alt="Sol-4 Logo" class="logo">
     </a>
     <nav class="nav-links" id="nav-links">
-      <a href="#services">Services</a>
+
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger" aria-expanded="false">
+          Services
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-dropdown-menu">
+          <div class="dropdown-col">
+            <span class="dropdown-label">Legal Services</span>
+            <a href="#services" class="dropdown-link">Buying Property</a>
+            <a href="#services" class="dropdown-link">Spanish Inheritance</a>
+            <a href="#services" class="dropdown-link">Spanish Wills</a>
+            <a href="#services" class="dropdown-link">Property Sale</a>
+          </div>
+          <div class="dropdown-col">
+            <span class="dropdown-label">Additional Services</span>
+            <a href="#services" class="dropdown-link">NIE &amp; Residency</a>
+            <a href="#services" class="dropdown-link">Notary Representation</a>
+            <a href="#services" class="dropdown-link">Urban &amp; Legal Checks</a>
+          </div>
+          <div class="dropdown-col">
+            <span class="dropdown-label">Business Solutions</span>
+            <a href="#ecosystem" class="dropdown-link">Tax &amp; Accounting</a>
+            <a href="#ecosystem" class="dropdown-link">Company Formation</a>
+            <a href="#ecosystem" class="dropdown-link">Labour Law</a>
+          </div>
+        </div>
+      </div>
+
       <a href="#partners">About Us</a>
       <a href="#methodology">How We Work</a>
       <a href="#testimonials">Testimonials</a>
+      <a href="#" class="nav-biloop">Biloop Portal</a>
       <a href="#contact" class="btn btn-primary">Get a Consultation</a>
     </nav>
     <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">
@@ -741,7 +770,29 @@ window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.
 const toggle = document.getElementById('mobile-toggle');
 const nav = document.getElementById('nav-links');
 toggle.addEventListener('click',()=>{toggle.classList.toggle('active');nav.classList.toggle('active')});
-nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{toggle.classList.remove('active');nav.classList.remove('active')}));
+nav.querySelectorAll('a:not(.dropdown-link)').forEach(a=>a.addEventListener('click',()=>{toggle.classList.remove('active');nav.classList.remove('active')}));
+nav.querySelectorAll('.dropdown-link').forEach(a=>a.addEventListener('click',()=>{toggle.classList.remove('active');nav.classList.remove('active')}));
+
+// ── Services Dropdown ──
+const dropdownTrigger = document.querySelector('.nav-dropdown-trigger');
+const dropdownMenu = document.querySelector('.nav-dropdown-menu');
+if(dropdownTrigger && dropdownMenu){
+  // Mobile: toggle on click
+  dropdownTrigger.addEventListener('click',()=>{
+    const isMobile = window.innerWidth <= 768;
+    if(isMobile){
+      const open = dropdownMenu.classList.toggle('open');
+      dropdownTrigger.setAttribute('aria-expanded', open);
+    }
+  });
+  // Close on outside click
+  document.addEventListener('click',e=>{
+    if(!e.target.closest('.nav-dropdown')){
+      dropdownMenu.classList.remove('open');
+      dropdownTrigger.setAttribute('aria-expanded','false');
+    }
+  });
+}
 
 // ── Counter-Up Animation ──
 function animateCounters(){
