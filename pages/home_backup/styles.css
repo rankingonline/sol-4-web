@@ -237,9 +237,9 @@ header .logo{
 .hero::before{
   content:'';position:absolute;inset:0;
   background:
-    linear-gradient(135deg,rgba(30,15,48,.15) 0%,rgba(30,15,48,.08) 100%),
-    radial-gradient(circle at 30% 40%,rgba(155,111,196,.06) 0%,transparent 50%),
-    radial-gradient(circle at 70% 60%,rgba(126,77,179,.04) 0%,transparent 50%);
+    linear-gradient(135deg,rgba(30,15,48,.72) 0%,rgba(30,15,48,.55) 100%),
+    radial-gradient(circle at 30% 40%,rgba(155,111,196,.25) 0%,transparent 50%),
+    radial-gradient(circle at 70% 60%,rgba(126,77,179,.15) 0%,transparent 50%);
   pointer-events:none;
   z-index:1;
 }
@@ -365,7 +365,7 @@ header .logo{
 }
 .sr-number{font:500 18px var(--font-body);color:var(--neutral-400);transition:color .3s ease;margin-right:var(--space-4)}
 .sr-content h3{font-size:32px;color:var(--neutral-900);margin-bottom:var(--space-2);transition:color .3s ease}
-.sr-content p{font-size:20px;color:var(--neutral-600);margin:0;max-width:560px;transition:color .3s ease;line-height:1.6;font-weight:400}
+.sr-content p{font-size:18px;color:var(--neutral-600);margin:0;max-width:560px;transition:color .3s ease;line-height:1.6}
 .sr-icon{
   width:64px;height:64px;border-radius:50%;background:var(--white-pure);
   display:flex;align-items:center;justify-content:center;color:var(--lila-500);
@@ -468,19 +468,6 @@ header .logo{
   background: var(--lila-50);
   color: var(--lila-700);
   border: 1px solid var(--lila-200);
-}
-
-/* Bio association links */
-.bio-link {
-  color: var(--lila-600);
-  font-weight: 600;
-  text-decoration: none;
-  border-bottom: 1.5px solid var(--lila-200);
-  transition: color .2s ease, border-color .2s ease;
-}
-.bio-link:hover {
-  color: var(--lila-800);
-  border-color: var(--lila-500);
 }
 
 /* ── Methodology ── */
@@ -909,7 +896,7 @@ header .logo{
   line-height: 1.2;
 }
 .eco-sc-text {
-  font-size: 17px;
+  font-size: 15px;
   line-height: 1.65;
   color: var(--neutral-500);
   margin: 0;
@@ -1272,15 +1259,9 @@ header .logo{
   display: block;
 }
 
-/* Textarea message min-height */
-#message {
-  min-height: 220px;
-  resize: vertical;
-}
-
 /* ── Footer ── */
 .site-footer{
-  background:var(--lila-900);color:rgba(255,255,255,.75);
+  background:var(--lila-900);color:var(--lila-300);
   padding:var(--space-10) 0 0;
 }
 
@@ -1300,7 +1281,7 @@ header .logo{
   margin-bottom:var(--space-4);display:block;
 }
 .footer-tagline{
-  font-size:14px;line-height:1.65;color:rgba(255,255,255,.65);
+  font-size:14px;line-height:1.65;color:var(--lila-400);
   max-width:280px;margin-bottom:var(--space-4);
 }
 .footer-brand .footer-langs{display:flex;gap:var(--space-2)}
@@ -1309,12 +1290,12 @@ header .logo{
 .footer-heading{
   font:700 12px/1 var(--font-heading);
   letter-spacing:.1em;text-transform:uppercase;
-  color:rgba(255,255,255,.9);
+  color:rgba(255,255,255,.5);
   margin-bottom:var(--space-5);
 }
 .footer-links{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:var(--space-3)}
 .footer-links a{
-  font-size:14px;color:rgba(255,255,255,.75);text-decoration:none;
+  font-size:14px;color:var(--lila-300);text-decoration:none;
   transition:color .2s ease;
 }
 .footer-links a:hover{color:#fff}
@@ -1326,14 +1307,14 @@ header .logo{
 }
 .footer-contact-list li{
   display:flex;align-items:flex-start;gap:var(--space-3);
-  font-size:14px;color:rgba(255,255,255,.75);line-height:1.5;
+  font-size:14px;color:var(--lila-300);line-height:1.5;
 }
 .footer-contact-list svg{
   flex-shrink:0;margin-top:2px;
-  color:rgba(255,255,255,.6);
+  color:var(--lila-400);
 }
 .footer-contact-list a{
-  color:rgba(255,255,255,.85);text-decoration:none;transition:color .2s ease;
+  color:var(--lila-300);text-decoration:none;transition:color .2s ease;
 }
 .footer-contact-list a:hover{color:#fff}
 
@@ -1343,13 +1324,13 @@ header .logo{
   flex-wrap:wrap;gap:var(--space-3);
   padding:var(--space-5) 0;
 }
-.footer-bottom p{font-size:12px;color:rgba(255,255,255,.5);margin:0}
+.footer-bottom p{font-size:12px;color:var(--lila-500);margin:0}
 .footer-legal-links{display:flex;gap:var(--space-5);flex-wrap:wrap}
 .footer-legal-links a{
-  font-size:12px;color:rgba(255,255,255,.5);text-decoration:none;
+  font-size:12px;color:var(--lila-500);text-decoration:none;
   transition:color .2s ease;
 }
-.footer-legal-links a:hover{color:rgba(255,255,255,.85)}
+.footer-legal-links a:hover{color:var(--lila-300)}
 
 /* ── WhatsApp Float ── */
 .whatsapp-float{
@@ -1475,7 +1456,6 @@ header .logo{
   .dropdown-link:hover{background:rgba(255,255,255,.1);color:#fff !important}
   .mobile-toggle{display:block;z-index:1000;position:relative}
   .mobile-toggle.active span{background:#fff !important}
-  .nav-biloop{font-size:16px !important;padding:8px 18px !important}
   .mobile-toggle.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
   .mobile-toggle.active span:nth-child(2){opacity:0}
   .mobile-toggle.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
