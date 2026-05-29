@@ -927,6 +927,7 @@ header .logo{
 .eco-sc-link span { transition: transform .25s ease; }
 .eco-sc-link:hover { color: var(--lila-800); gap: var(--space-3); }
 .eco-sc-link:hover span { transform: translateX(4px); }
+.eco-sc-link--disabled { cursor: default; pointer-events: none; opacity: .5; }
 
 /* ── Pills Card ── */
 .eco-pills-card {
