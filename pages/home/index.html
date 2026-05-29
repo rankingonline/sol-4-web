@@ -598,6 +598,7 @@
         <img src="../../assets/images/logo-APAFCV .webp" alt="APAFCV" class="assoc-logo">
         <span class="assoc-logo assoc-text">APIA</span>
         <img src="../../assets/images/logo-aaedi.png" alt="AAEDI" class="assoc-logo">
+        <img src="../../assets/images/logo-api.png" alt="API — Colegio Oficial de Agentes de la Propiedad Inmobiliaria de Alicante" class="assoc-logo">
       </div>
     </div>
   </section>
@@ -832,13 +833,11 @@
     const dropdownTrigger = document.querySelector('.nav-dropdown-trigger');
     const dropdownMenu = document.querySelector('.nav-dropdown-menu');
     if (dropdownTrigger && dropdownMenu) {
-      // Mobile: toggle on click
-      dropdownTrigger.addEventListener('click', () => {
-        const isMobile = window.innerWidth <= 768;
-        if (isMobile) {
-          const open = dropdownMenu.classList.toggle('open');
-          dropdownTrigger.setAttribute('aria-expanded', open);
-        }
+      // Toggle on click for both mobile and desktop
+      dropdownTrigger.addEventListener('click', e => {
+        e.stopPropagation();
+        const open = dropdownMenu.classList.toggle('open');
+        dropdownTrigger.setAttribute('aria-expanded', open);
       });
       // Close on outside click
       document.addEventListener('click', e => {
@@ -846,6 +845,13 @@
           dropdownMenu.classList.remove('open');
           dropdownTrigger.setAttribute('aria-expanded', 'false');
         }
+      });
+      // Close when a dropdown link is clicked
+      dropdownMenu.querySelectorAll('.dropdown-link').forEach(link => {
+        link.addEventListener('click', () => {
+          dropdownMenu.classList.remove('open');
+          dropdownTrigger.setAttribute('aria-expanded', 'false');
+        });
       });
     }
 
