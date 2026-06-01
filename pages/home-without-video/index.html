@@ -62,6 +62,22 @@
 
 <!-- ═══ SECTION 01: HERO ═══ -->
 <section class="hero" id="hero">
+  <!-- Ambient floating solar dust particles -->
+  <div class="hero-particles">
+    <div class="hero-particle p-1"></div>
+    <div class="hero-particle p-2"></div>
+    <div class="hero-particle p-3"></div>
+    <div class="hero-particle p-4"></div>
+    <div class="hero-particle p-5"></div>
+    <div class="hero-particle p-6"></div>
+    <div class="hero-particle p-7"></div>
+    <div class="hero-particle p-8"></div>
+    <div class="hero-particle p-9"></div>
+    <div class="hero-particle p-10"></div>
+    <div class="hero-particle p-11"></div>
+    <div class="hero-particle p-12"></div>
+  </div>
+  
   <!-- Dynamic Animated background orbs -->
   <div class="hero-bg-orbs">
     <div class="orb orb-1"></div>
@@ -74,7 +90,7 @@
   <div class="container">
     <div class="hero-split">
       <div class="hero-content">
-        <h1>Property lawyer in Spain for foreign buyers, sellers and&nbsp;heirs.</h1>
+        <h1>Property lawyer in Spain for <span class="text-glow-gradient">foreign buyers, sellers and&nbsp;heirs.</span></h1>
         <p class="hero-subtitle">Spain is complex. We've been handling all of it since&nbsp;2001.</p>
         <p class="hero-body">From your first property search to your last tax return in Spain, Mar and Vicente handle everything personally. Three languages. One team. No&nbsp;handoffs.</p>
         <div class="hero-ctas">
@@ -89,43 +105,87 @@
           <!-- Ambient glowing orb behind graphic -->
           <div class="graphic-glow"></div>
           
-          <!-- Central Solar Emblem -->
+          <!-- Central Solar Emblem (Now a Premium Geometric Property Shield) -->
           <div class="sun-emblem">
             <div class="sun-ring ring-1"></div>
             <div class="sun-ring ring-2"></div>
             <div class="sun-ring ring-3"></div>
             <div class="sun-center">
               <svg viewBox="0 0 100 100" class="sun-svg" aria-hidden="true">
-                <circle cx="50" cy="50" r="22" fill="none" stroke="url(#sun-gradient)" stroke-width="1.5" />
-                <circle cx="50" cy="50" r="14" fill="url(#sun-gradient-inner)" opacity="0.85" />
-                <!-- Sun rays -->
-                <path d="M50,8 L50,2 M50,98 L50,92 M8,50 L2,50 M98,50 L92,50 M20,20 L16,16 M80,80 L84,84 M20,80 L16,84 M80,20 L84,16" stroke="url(#sun-gradient)" stroke-width="2" stroke-linecap="round" />
+                <!-- Outer luxury shield diamond -->
+                <polygon points="50,12 85,50 50,88 15,50" fill="none" stroke="url(#crest-gradient)" stroke-width="1.5" />
+                <!-- Inner geometric lock diamond -->
+                <polygon points="50,25 72,50 50,75 28,50" fill="none" stroke="url(#crest-gradient-inner)" stroke-width="1" stroke-dasharray="3 3" />
+                
+                <!-- Stylized central geometric 'S' / Pillar of Law -->
+                <g transform="translate(35, 35) scale(0.3)" opacity="0.95">
+                  <path d="M50,10 L80,10 L80,30 L30,30 L30,50 L80,50 L80,90 L20,90 L20,70 L70,70 L70,50 L20,50 L20,10 Z" fill="url(#crest-gradient)" />
+                </g>
+                
+                <!-- Central glowing core (Silver/Lila) -->
+                <circle cx="50" cy="50" r="9" fill="url(#core-glow)" class="sun-core" />
+                
+                <!-- Fine Coordinate grid lines representing planning and legal precision -->
+                <line x1="50" y1="6" x2="50" y2="94" stroke="var(--lila-300)" stroke-width="0.5" stroke-dasharray="2 3" opacity="0.6" />
+                <line x1="6" y1="50" x2="94" y2="50" stroke="var(--lila-300)" stroke-width="0.5" stroke-dasharray="2 3" opacity="0.6" />
+
                 <defs>
-                  <linearGradient id="sun-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#ffdf80" />
-                    <stop offset="50%" stop-color="var(--lila-300)" />
+                  <linearGradient id="crest-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#ffffff" />
+                    <stop offset="50%" stop-color="var(--lila-200)" />
                     <stop offset="100%" stop-color="var(--lila-500)" />
                   </linearGradient>
-                  <radialGradient id="sun-gradient-inner" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" stop-color="#fff6d9" />
-                    <stop offset="70%" stop-color="var(--lila-400)" />
-                    <stop offset="100%" stop-color="var(--lila-700)" />
+                  <linearGradient id="crest-gradient-inner" x1="0%" y1="100%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="var(--lila-300)" />
+                    <stop offset="100%" stop-color="var(--lila-600)" />
+                  </linearGradient>
+                  <radialGradient id="core-glow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#ffffff" />
+                    <stop offset="60%" stop-color="var(--lila-200)" />
+                    <stop offset="100%" stop-color="var(--lila-600)" />
                   </radialGradient>
                 </defs>
               </svg>
             </div>
           </div>
           
-          <!-- Abstract vector connecting lines -->
-          <svg class="graphic-connectors" viewBox="0 0 400 400" aria-hidden="true">
-            <path class="connector-line line-1" d="M140,140 L70,85" stroke="var(--lila-300)" stroke-width="1.5" stroke-dasharray="4 4" fill="none" opacity="0.6" />
-            <path class="connector-line line-2" d="M260,140 L340,230" stroke="var(--lila-300)" stroke-width="1.5" stroke-dasharray="4 4" fill="none" opacity="0.6" />
-            <path class="connector-line line-3" d="M200,260 L120,320" stroke="var(--lila-300)" stroke-width="1.5" stroke-dasharray="4 4" fill="none" opacity="0.6" />
+          <!-- Abstract vector connecting lines with traveling energy pulses (ViewBox 420x420) -->
+          <svg class="graphic-connectors" viewBox="0 0 420 420" aria-hidden="true">
+            <!-- Base dashed lines - Perfectly Centered in pixel scale -->
+            <path class="connector-line line-1" d="M210,210 L80,95" stroke="var(--lila-300)" stroke-width="1.5" stroke-dasharray="6 6" fill="none" opacity="0.35" />
+            <path class="connector-line line-2" d="M210,210 L345,290" stroke="var(--lila-300)" stroke-width="1.5" stroke-dasharray="6 6" fill="none" opacity="0.35" />
+            <path class="connector-line line-3" d="M210,210 L200,400" stroke="var(--lila-300)" stroke-width="1.5" stroke-dasharray="6 6" fill="none" opacity="0.35" />
+            
+            <!-- Pulse overlays (Silver/White) -->
+            <path class="connector-pulse pulse-1" d="M210,210 L80,95" stroke="url(#pulse-gradient-1)" stroke-width="2.5" stroke-linecap="round" fill="none" />
+            <path class="connector-pulse pulse-2" d="M210,210 L345,290" stroke="url(#pulse-gradient-2)" stroke-width="2.5" stroke-linecap="round" fill="none" />
+            <path class="connector-pulse pulse-3" d="M210,210 L200,400" stroke="url(#pulse-gradient-3)" stroke-width="2.5" stroke-linecap="round" fill="none" />
+            
+            <defs>
+              <!-- Connector pulse gradients (Fading to pure white / lila) -->
+              <linearGradient id="pulse-gradient-1" x1="100%" y1="100%" x2="0%" y2="0%">
+                <stop offset="0%" stop-color="var(--lila-300)" />
+                <stop offset="35%" stop-color="#ffffff" />
+                <stop offset="100%" stop-color="transparent" />
+              </linearGradient>
+              <linearGradient id="pulse-gradient-2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="var(--lila-300)" />
+                <stop offset="35%" stop-color="#ffffff" />
+                <stop offset="100%" stop-color="transparent" />
+              </linearGradient>
+              <linearGradient id="pulse-gradient-3" x1="100%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="var(--lila-300)" />
+                <stop offset="35%" stop-color="#ffffff" />
+                <stop offset="100%" stop-color="transparent" />
+              </linearGradient>
+            </defs>
           </svg>
           
           <!-- Floating glassmorphic cards -->
           <!-- Badge 1: Due Diligence -->
           <div class="floating-badge badge-1" data-depth="0.25">
+            <div class="badge-glare"></div>
+            <div class="badge-header-dot"></div>
             <div class="badge-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
@@ -137,6 +197,8 @@
           
           <!-- Badge 2: Since 2001 -->
           <div class="floating-badge badge-2" data-depth="-0.15">
+            <div class="badge-glare"></div>
+            <div class="badge-header-dot"></div>
             <div class="badge-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             </div>
@@ -148,6 +210,8 @@
           
           <!-- Badge 3: No Handoffs -->
           <div class="floating-badge badge-3" data-depth="0.35">
+            <div class="badge-glare"></div>
+            <div class="badge-header-dot"></div>
             <div class="badge-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
             </div>
@@ -851,7 +915,11 @@ if (heroSection && graphicContainer) {
     isMobile = window.innerWidth <= 768;
     if (isMobile) {
       graphicContainer.style.transform = '';
-      floatingBadges.forEach(badge => badge.style.transform = '');
+      floatingBadges.forEach(badge => {
+        badge.style.transform = '';
+        const glare = badge.querySelector('.badge-glare');
+        if (glare) glare.style.background = '';
+      });
     }
   });
 
@@ -864,13 +932,13 @@ if (heroSection && graphicContainer) {
     const y = (e.clientY - rect.top) / rect.height - 0.5;
 
     // Rotate graphic container
-    graphicContainer.style.transform = `perspective(1000px) rotateY(${x * 15}deg) rotateX(${-y * 15}deg)`;
+    graphicContainer.style.transform = `perspective(1200px) rotateY(${x * 16}deg) rotateX(${-y * 16}deg)`;
 
     // Move floating badges differentials (parallax)
     floatingBadges.forEach(badge => {
       const depth = parseFloat(badge.dataset.depth) || 0.2;
-      const moveX = x * depth * 70;
-      const moveY = y * depth * 70;
+      const moveX = x * depth * 75;
+      const moveY = y * depth * 75;
       
       // Keep the translateZ for 3D depth and apply the parallax displacement
       let baseZ = '30px';
@@ -881,11 +949,39 @@ if (heroSection && graphicContainer) {
     });
   });
 
+  // Dynamic interactive glare on each individual badge
+  floatingBadges.forEach(badge => {
+    badge.addEventListener('mousemove', (e) => {
+      if (isMobile) return;
+      const rect = badge.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      const pctX = (x / rect.width) * 100;
+      const pctY = (y / rect.height) * 100;
+      
+      const glare = badge.querySelector('.badge-glare');
+      if (glare) {
+        glare.style.transform = 'none'; // Bypass the static CSS transition slide
+        glare.style.background = `radial-gradient(circle at ${pctX}% ${pctY}%, rgba(255, 255, 255, 0.22) 0%, transparent 60%)`;
+      }
+    });
+    
+    badge.addEventListener('mouseleave', () => {
+      if (isMobile) return;
+      const glare = badge.querySelector('.badge-glare');
+      if (glare) {
+        glare.style.transform = '';
+        glare.style.background = '';
+      }
+    });
+  });
+
   heroSection.addEventListener('mouseleave', () => {
     if (isMobile) return;
     
     // Reset positions smoothly
-    graphicContainer.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg)';
+    graphicContainer.style.transform = 'perspective(1200px) rotateY(0deg) rotateX(0deg)';
     floatingBadges.forEach(badge => {
       badge.style.transform = '';
     });
