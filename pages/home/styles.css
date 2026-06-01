@@ -240,7 +240,7 @@ header .logo{
 .hero::before{
   content:'';position:absolute;inset:0;
   background:
-    linear-gradient(to right,rgba(0,0,0,.75) 0%,transparent 60%),
+    linear-gradient(to right,rgba(0,0,0,.92) 0%,transparent 60%),
     linear-gradient(135deg,rgba(30,15,48,.15) 0%,rgba(30,15,48,.08) 100%),
     radial-gradient(circle at 30% 40%,rgba(155,111,196,.06) 0%,transparent 50%),
     radial-gradient(circle at 70% 60%,rgba(126,77,179,.04) 0%,transparent 50%);
