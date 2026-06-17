@@ -94,7 +94,7 @@ p+p{margin-top:var(--space-4)}
 }
 /* Initial transparent state (Logo is white) */
 .site-header .logo { filter: brightness(0) invert(1); }
-.site-header .nav-links a:not(.btn):not(.dropdown-link) { color: #fff; }
+.site-header .nav-links a:not(.btn):not(.dropdown-link):not(.dropdown-all-link) { color: #fff; }
 .site-header .mobile-toggle span { background: #fff; }
 
 .site-header.scrolled{
@@ -193,6 +193,21 @@ header .logo{
 .dropdown-link::after{display:none !important}
 .dropdown-link:hover,
 .nav-dropdown-menu .dropdown-link:hover{background:var(--lila-50);color:var(--lila-700)}
+
+.dropdown-all{
+  grid-column:1/-1;
+  border-top:1px solid var(--neutral-100);
+  padding:var(--space-3) var(--space-2) var(--space-2);
+  margin-top:var(--space-2);
+}
+.dropdown-all-link{
+  font:600 13px/1 var(--font-body);
+  color:var(--lila-600);
+  letter-spacing:.02em;
+  transition:color .2s ease;
+}
+.dropdown-all-link::after{display:none !important}
+.dropdown-all-link:hover{color:var(--lila-800)}
 
 .nav-biloop{
   display:inline-flex;align-items:center;gap:6px;

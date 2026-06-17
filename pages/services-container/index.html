@@ -51,6 +51,9 @@
               <a href="../../pages/advisory/index.html" class="dropdown-link">Company Formation</a>
               <a href="../../pages/advisory/index.html" class="dropdown-link">Labour Law</a>
             </div>
+            <div class="dropdown-all">
+              <a href="../../pages/services-container/index.html" class="dropdown-all-link nav-active">All services →</a>
+            </div>
           </div>
         </div>
         <a href="../../pages/home/index.html#partners">About Us</a>
@@ -843,7 +846,7 @@
           dropdownTrigger.setAttribute('aria-expanded', 'false');
         }
       });
-      dropdownMenu.querySelectorAll('.dropdown-link').forEach(link => {
+      dropdownMenu.querySelectorAll('.dropdown-link, .dropdown-all-link').forEach(link => {
         link.addEventListener('click', () => {
           dropdownMenu.classList.remove('open');
           dropdownTrigger.setAttribute('aria-expanded', 'false');
