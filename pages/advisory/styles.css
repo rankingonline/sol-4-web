@@ -83,8 +83,8 @@ p+p{margin-top:var(--space-4)}
   box-shadow:var(--shadow-sm);padding:var(--space-2) 0;
 }
 .site-header.scrolled .logo{filter:none;height:50px !important}
-.site-header.scrolled .nav-links a:not(.btn){color:var(--neutral-700)}
-.site-header.scrolled .nav-links a:not(.btn):hover{color:var(--lila-500)}
+.site-header.scrolled .nav-links a:not(.btn):not(.dropdown-link):not(.dropdown-all-link){color:var(--neutral-700)}
+.site-header.scrolled .nav-links a:not(.btn):not(.dropdown-link):not(.dropdown-all-link):hover{color:var(--lila-500)}
 .site-header.scrolled .mobile-toggle span{background:var(--neutral-900)}
 .header-inner{display:flex;align-items:center;justify-content:space-between}
 .header-inner a[aria-label="Sol-4 Home"]{display:flex;align-items:center;height:100%}
