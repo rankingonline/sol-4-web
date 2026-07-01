@@ -93,9 +93,9 @@ p+p{margin-top:var(--space-4)}
   transition:background .3s ease,box-shadow .3s ease,padding .3s ease;
 }
 /* Initial transparent state (Logo is white) */
-.site-header .logo { filter: brightness(0) invert(1); }
-.site-header .nav-links a:not(.btn):not(.dropdown-link):not(.dropdown-all-link) { color: #fff; }
-.site-header .mobile-toggle span { background: #fff; }
+.site-header:not(.scrolled) .logo { filter: brightness(0) invert(1); }
+.site-header:not(.scrolled) .nav-links a:not(.btn):not(.dropdown-link):not(.dropdown-all-link) { color: #fff; }
+.site-header:not(.scrolled) .mobile-toggle span { background: #fff; }
 
 .site-header.scrolled{
   background:rgba(250,248,252,.85);
